@@ -1,15 +1,10 @@
-def validate_number(number):
-    if type(number) != int:
-        if type(number) == str:
-            return "Error: Please input integer"
-        elif number >= 1 and number <= 12:
-            return "Error: Please input integer"
-        else:
-            return "Error: Month number out of range"
-    elif number >= 1 and number <= 12:
-        return number
+def validate_number(price):
+    if type(price) == str:
+        return "Error: Please input integer or float price"
+    elif price <= 0:
+        return "Error: Price must be a positive non-zero number"
     else:
-        return "Error: Month number out of range"
+        return price
     
 def number_to_month(number):
     months = ["January", "February", "March", "April", "May", "June", 
@@ -21,6 +16,3 @@ def display_month(number):
     if type(result) == int:
         return number_to_month(result)
     return result
-    
-
-
