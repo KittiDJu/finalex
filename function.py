@@ -1,4 +1,4 @@
-def validate_number(price):
+def validate_price(price):
     if type(price) == str:
         return "Error: Please input integer or float price"
     elif price <= 0:
@@ -6,13 +6,13 @@ def validate_number(price):
     else:
         return price
     
-def number_to_month(number):
-    months = ["January", "February", "March", "April", "May", "June", 
-              "July", "August", "September", "October", "November", "December"]
-    return months[number - 1]
+def calculate_monthly(price):
+    down = 20/100 * (price)
+    monthly = ((price - down) * 5 / 100 ) / 12
+    return monthly
 
-def display_month(number):
-    result = validate_number(number)
-    if type(result) == int:
-        return number_to_month(result)
+def display_monthly(price):
+    result = validate_price(price)
+    if type(result) == int && type(result) == float:
+        return calculate_monthly(result)
     return result
