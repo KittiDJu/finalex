@@ -176,10 +176,3 @@ def test_integer_input_1_p_5():
     expected_result = "Error: Please input integer"
     actual_result = validate_number(input)
     assert expected_result == actual_result
-
-
-
-
-
-
-
