@@ -1,4 +1,4 @@
-from function import display_month
+from function import display_monthly
 import pytest
 
 @pytest.mark.display
