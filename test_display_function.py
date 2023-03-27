@@ -3,7 +3,7 @@ import pytest
 
 @pytest.mark.display
 @pytest.mark.parametrize('input_number,expected_result', [ 
-    (150000,500), (150000.500.001666667), (0,"Error: Error: Please input positive integer or float price"), (-1,"Error: Price must be a positive non-zero number"),
+    (150000,500), (0,"Error: Error: Please input positive integer or float price"), (-1,"Error: Price must be a positive non-zero number"),
     (-1.5,"Error: Price must be a positive non-zero number"), ("a","Error: Please input positive integer or float price"), 
     ("&","Error: Please input positive integer or float price")
 ])
