@@ -13,6 +13,6 @@ def calculate_monthly(price):
 
 def display_monthly(price):
     result = validate_price(price)
-    if type(result) == int && type(result) == float:
+    if type(result) == int and type(result) == float:
         return calculate_monthly(result)
     return result
