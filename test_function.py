@@ -34,7 +34,7 @@ def test_price_int_input_150000_50():
 @pytest.mark.validate
 def test_price_zero_input():
     input = 0
-    expected_result = "Error: Price must be a positive non-zero number"
+    expected_result = "Error: Please input positive integer or float price"
     actual_result = validate_price(input)
     assert expected_result == actual_result
 
@@ -55,13 +55,13 @@ def test_price_negative_float():
 @pytest.mark.validate
 def test_price_str_input_1():
     input = "a"
-    expected_result = "Error: Please input integer or float price"
+    expected_result = "Error: Please input positive integer or float price"
     actual_result = validate_price(input)
     assert expected_result == actual_result
    
 @pytest.mark.validate
 def test_price_str_input_2():
     input = "&"
-    expected_result = "Error: Please input integer or float price"
+    expected_result = "Error: Please input positive integer or float price"
     actual_result = validate_price(input)
     assert expected_result == actual_result
