@@ -1,11 +1,12 @@
-from function import display_month
-input_number = input("Enter number : ")
+from function import display
+input_price = input("Enter your motorcycle price : ")
 try:
+    input_price = int(input_number)
+except ValueError:
     try:
-        input_number = int(input_number)
-    except:
-        input_number = float(input_number)
-except:
-    input_number = str(input_number)
-result = display_month(input_number)
+        input_price = float(input_number)
+    except ValueError:
+        print("Invalid input. Please enter an integer or a float price.")
+        exit()
+result = display(input_price)
 print(result)
