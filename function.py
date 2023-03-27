@@ -9,7 +9,7 @@ def validate_price(price):
 def calculate_monthly(price):
     down = 20/100 * (price)
     monthly = ((price - down) * 5 / 100 ) / 12
-    return down, monthly
+    return monthly
 
 def display_monthly(price):
     result = validate_price(price)
