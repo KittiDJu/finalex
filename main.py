@@ -8,5 +8,5 @@ except ValueError:
     except ValueError:
         print("Invalid input. Please enter an integer or a float price.")
         exit()
-result = display(input_price)
+result = display_monthly(input_price)
 print(result)
