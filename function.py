@@ -6,20 +6,10 @@ def validate_price(price):
     else:
         return price
 
-def calculate_down(price):    
-    down = 20/100 * (price)
-    return down
-
 def calculate_monthly(price):
     down = 20/100 * (price)
     monthly = ((price - down) * 5 / 100 ) / 12
-    return monthly
-
-def display_down(price):
-    result = validate_price(price)
-    if type(result) == int && type(result) == float:
-        return calculate_down(result)
-    return result
+    return down, monthly
 
 def display_monthly(price):
     result = validate_price(price)
