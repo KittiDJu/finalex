@@ -1,7 +1,7 @@
 def validate_price(price):
-    if type(price) == str:
-        return "Error: Please input integer or float price"
-    elif price <= 0:
+    if isinstance(price, str) or price == 0:
+        return "Error: Please input positive integer or float price"
+    elif price < 0:
         return "Error: Price must be a positive non-zero number"
     else:
         return price
