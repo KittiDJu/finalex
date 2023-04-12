@@ -6,13 +6,29 @@ def validate_price(price):
     else:
         return price
 
-def calculate_monthly(price):
-    down = 20/100 * (price)
+def calculate_down_payment(price):
+    down = 20 / 100 * (price)
+    if type(down) == float:
+        down_r = round(down, 2)
+        return down_r
+    return down
+
+def calculate_monthly_payment(price):
+    down = calculate_down_payment(price)
     monthly = ((price - down) * 5 / 100 ) / 12
+    if type(monthly) == float:
+        monthly_r = round(monthly, 2)
+        return monthly_r
     return monthly
 
-def display_monthly(price):
+def display_down_payment(price):
     result = validate_price(price)
-    if type(result) == int and type(result) == float:
-        return calculate_monthly(result)
+    if type(result) == int or type(result) == float:
+        return calculate_down_payment(result)
+    return result
+
+def display_monthly_payment(price):
+    result = validate_price(price)
+    if type(result) == int or type(result) == float:
+        return calculate_monthly_payment(result)
     return result
