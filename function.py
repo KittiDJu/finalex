@@ -28,30 +28,6 @@ def validate_price_and_down_payment(price, down_payment):
     else:
         return (price, down_payment)
 
-# def validate_price_and_down_payment(price, down_payment):
-#     if not isinstance(down_payment, (int, float)) and isinstance(price, (int, float)):
-#         return "Error: Price and Down Payment be number"
-#     elif isinstance(price, str) and down_payment <= 0:
-#         return "Error: Price Payment must not be string and Down Payment must be a positive non-zero number"
-#     elif isinstance(down_payment, str) and price <= 0:
-#         return "Error: Down Payment must not be string and Price must be a positive non-zero number"
-#     elif isinstance(price, str):
-#         return "Error: Price Payment must not be string" 
-#     elif isinstance(down_payment, str):
-#         return "Error: Down Payment must not be string"
-#     elif price <= 0 and down_payment <= 0:
-#         return "Error: Price and down_payment must be a positive non-zero number"
-#     elif price <= 0 and down_payment > price:
-#         return "Error: Price must be a positive non-zero number and Down payment cannot be greater than the price"
-#     elif price < 0:
-#         return "Error: Price must be a positive non-zero number"
-#     elif down_payment <= 0:
-#         return "Error: Down Payment must be a positive non-zero number"
-#     elif down_payment != 0.2 * price:
-#         return "Error: Down payment must be 20 percent of the price"
-#     else:
-#         return price, down_payment
-
 def calculate_monthly_payment(price, down):
     monthly = ((price - down) * 0.05 ) / 12
     if type(monthly) == float:
