@@ -11,7 +11,7 @@ def validate_down_payment(down_payment, price):
         return "Error: Down payment must be a number"
     elif down_payment <= 0:
         return "Error: Down payment must be a positive non-zero number"
-    elif down_payment != 0.2 * price:
+    elif isinstance(price, (int, float)) and isinstance(down_payment, (int, float)) and down_payment != round(0.2 * float(price), 2):
         return "Error: Down payment must be 20 percent of the price"
     else:
         return None
@@ -37,6 +37,6 @@ def calculate_monthly_payment(price, down):
 
 def display_monthly_payment(price, down):
     result = validate_price_and_down_payment(price,down)
-    if type(result) == int or type(result) == float:
-        return calculate_monthly_payment(result)
+    if isinstance(result[0], (int, float)) and isinstance(result[1], (int, float)):
+        return calculate_monthly_payment(price, down)
     return result
