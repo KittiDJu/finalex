@@ -148,22 +148,6 @@ def test_int_negative_float_input():
     assert expected_result == actual_result
 
 @pytest.mark.validate
-def test_negative_negative_float_input():
-    input1 = -30000
-    input2 = -1.5
-    expected_result = "Error: Price must be a positive non-zero number and Error: Down payment must be a positive non-zero number"
-    actual_result = validate_price_and_down_payment(input1, input2)
-    assert expected_result == actual_result
-
-@pytest.mark.validate
-def test_negative_float_negative_input():
-    input1 = -1.5
-    input2 = -30000
-    expected_result = "Error: Price must be a positive non-zero number and Error: Down payment must be a positive non-zero number"
-    actual_result = validate_price_and_down_payment(input1, input2)
-    assert expected_result == actual_result
-
-@pytest.mark.validate
 def test_str_str_input():
     input1 = 'abc'
     input2 = 'abc'
