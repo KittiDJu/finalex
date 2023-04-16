@@ -1,5 +1,2 @@
-fastapi
-mangum
 pytest
 requests
-httpx
